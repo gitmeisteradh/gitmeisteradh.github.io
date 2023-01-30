@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .big-screen {
+        width: 500px;
+        height: 200px;
+        font-size: 40px;
+        text-align: center;
+        margin: 20px auto;
+        background-color: lightgray;
+      }
+      .buttons {
+        text-align: center;
+        margin-top: 40px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="big-screen" id="result">
+    </div>
+    <div class="buttons">
+      <button onclick="luukResponse()">Kan Luuk vanavond?</button>
+      <button onclick="demisResponse()">Kan Demis vanavond?</button>
+    </div>
+    <script>
+      function luukResponse() {
+        var responses = ["Waarschijnlijk wel, Luuk maakt tijd", "Zeer onwaarschijnlijk, hij zit in het buitenland"];
+        var response = responses[Math.floor(Math.random() * responses.length)];
+        document.getElementById("result").innerHTML = response;
+      }
+      function demisResponse() {
+        document.getElementById("result").innerHTML = "Hahahaha, wat dacht je nou?";
+      }
+    </script>
+  </body>
+</html>
